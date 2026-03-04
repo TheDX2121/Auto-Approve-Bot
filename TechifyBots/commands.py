@@ -7,7 +7,7 @@ import asyncio
 from Script import text
 from .database import tb
 
-@Client.on_message(filters.command("start"))
+@Client.on_message(filters.command("start") & filters.private)
 async def start_cmd(client, message):
     if await tb.get_user(message.from_user.id) is None:
         await tb.add_user(message.from_user.id, message.from_user.first_name)

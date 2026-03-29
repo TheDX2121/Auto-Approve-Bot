@@ -1,14 +1,14 @@
 import os
 from typing import List
 
-API_ID = os.environ.get("API_ID", "")
-API_HASH = os.environ.get("API_HASH", "")
-BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
+API_ID = os.environ.get("API_ID", "29296297")
+API_HASH = os.environ.get("API_HASH", "477a9529cfd84f4088539c6ab94351fc")
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "8152839662:AAG3HY0or2ggf1xur93kkW_Kv0P41HO8BvM")
 ADMIN = int(os.environ.get("ADMIN", "5094080507"))
 PICS = (os.environ.get("PICS", "https://i.ibb.co/MDssddJp/pic.jpg https://i.ibb.co/n8fQ2xcx/pic.jpg")).split()
 LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1003615234781"))
 NEW_REQ_MODE = os.environ.get("NEW_REQ_MODE", "True").lower() == "true"
-DB_URI = os.environ.get("DB_URI", "")
+DB_URI = os.environ.get("DB_URI", "mongodb+srv://Vebanu:Vebhav21218219@cluster0.u1oeiv8.mongodb.net/")
 DB_NAME = os.environ.get("DB_NAME", "approve")
 IS_FSUB = os.environ.get("IS_FSUB", "False").lower() == "true"  # Set "True" For Enable Force Subscribe
 AUTH_CHANNELS = list(map(int, os.environ.get("AUTH_CHANNELS", "").split())) # Add Multiple channel ids

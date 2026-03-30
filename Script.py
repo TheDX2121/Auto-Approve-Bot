@@ -12,7 +12,7 @@ class text(object):
 📂 𝘜𝘴𝘦 𝘵𝘩𝘦 𝘣𝘶𝘵𝘵𝘰𝘯𝘴 𝘣𝘦𝘭𝘰𝘸 𝘵𝘰 𝘨𝘦𝘵 𝘴𝘵𝘢𝘳𝘵𝘦𝘥
 ✅ 𝘚𝘦𝘯𝘥 /𝘴𝘵𝘢𝘳𝘵 𝘶𝘱𝘥𝘢𝘵𝘦 𝘵𝘩𝘦 𝘣𝘰𝘵
 
-<blockquote><b>‣ 𝖬𝖺𝗂𝗇𝗍𝖺𝗂𝗇𝖾𝖽 𝖡𝗒: <a href='https://t.me/Vebanu_x'>韋巴努</a></b></blockquote>"""
+<blockquote><b>‣ 𝖬𝖺𝗂𝗇𝗍𝖺𝗂𝗇𝖾𝖽 𝖡𝗒: <a href='https://t.me/Vrubhi_x'>韋巴努</a></b></blockquote>"""
 
     LOG = """👁️‍🗨️ 𝘜𝘚𝘌𝘙 𝘋𝘌𝘛𝘈𝘐𝘓𝘚
 

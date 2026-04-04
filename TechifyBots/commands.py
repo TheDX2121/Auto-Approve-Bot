@@ -87,12 +87,12 @@ async def approve_new(client, m):
             # Static 2x2 grid buttons with manual public channel URLs
             buttons = [
                 [
-                    InlineKeyboardButton("✅ Channel 1", url="https://t.me/channel1"),
-                    InlineKeyboardButton("✅ Channel 2", url="https://t.me/channel2")
+                    InlineKeyboardButton("✅ Channel 1", url="https://t.me/RitsamHub"),
+                    InlineKeyboardButton("✅ Channel 2", url="https://t.me/Vrubhi")
                 ],
                 [
-                    InlineKeyboardButton("✅ Channel 3", url="https://t.me/channel3"),
-                    InlineKeyboardButton("✅ Channel 4", url="https://t.me/channel4")
+                    InlineKeyboardButton("✅ Channel 3", url="https://t.me/Vebanu"),
+                    InlineKeyboardButton("✅ Channel 4", url="https://t.me/Vebanu_x")
                 ]
             ]
             

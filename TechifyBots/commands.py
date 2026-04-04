@@ -95,7 +95,6 @@ buttons = [
         InlineKeyboardButton("✅ Channel 4", url="https://t.me/channel4")
     ]
 ]
-
             # Send photo (from PICS variable) with caption and buttons
             await client.send_photo(
                 m.from_user.id,

@@ -26,10 +26,10 @@ async def start_cmd(client, message):
         photo=random.choice(PICS),
         caption=text.START.format(message.from_user.mention),
         reply_markup=InlineKeyboardMarkup([
-            [InlineKeyboardButton('⇆ 𝖠𝖽𝖽 𝖬𝖾 𝖳𝗈 𝖸𝗈𝗎𝗋 𝖦𝗋𝗈𝗎𝗉 ⇆', url=f"https://telegram.me/RitsamApprovebot?startgroup=true&admin=invite_users")],
-            [InlineKeyboardButton('ℹ️ 𝖠𝖻𝗈𝗎𝗍', callback_data='about'),
-             InlineKeyboardButton('📚 𝖧𝖾𝗅𝗉', callback_data='help')],
-            [InlineKeyboardButton('⇆ 𝖠𝖽𝖉 𝖬𝖾 𝖳𝗈 𝖸𝗈𝗎𝖗 𝖢𝖍𝖆𝖓𝖓𝖊𝖑 ⇆', url=f"https://telegram.me/RitsamApprovebot?startchannel=true&admin=invite_users")]
+            [InlineKeyboardButton('⇆ 𝖠𝖽𝖉 𝖬𝖾 𝖳𝗈 𝖸𝗈𝗎𝖘 𝖦𝗋𝖔𝖚𝖕 ⇆', url=f"https://telegram.me/RitsamApprovebot?startgroup=true&admin=invite_users")],
+            [InlineKeyboardButton('ℹ️ 𝖠𝖻𝗈𝖚𝖙', callback_data='about'),
+             InlineKeyboardButton('📚 𝖧𝖊𝖑𝖕', callback_data='help')],
+            [InlineKeyboardButton('⇆ 𝖠𝖽𝖉 𝖬𝖾 𝖳𝗈 𝖸𝗈𝖚𝖗 𝖈𝖍𝖆𝖓𝖓𝖊𝖑 ⇆', url=f"https://telegram.me/RitsamApprovebot?startchannel=true&admin=invite_users")]
         ])
     )
 
@@ -100,11 +100,13 @@ async def approve_new(client, m):
             await client.send_photo(
                 m.from_user.id,
                 photo=PICS[0] if PICS else "https://i.ibb.co/zVwBJ9Sd/IMG-20260331-124835-571.jpg",
-                caption=f"<blockquote>**{message.from_user.mention}**</blockquote>\n**Contenido exclusivo🔞🔒**\n**https://cutt.ly/xtAOopXP**\n**https://cutt.ly/xtAOopXP** \n\n**Únase para más😋👆.**",
+                caption=f"<blockquote><b>{m.from_user.mention}</b></blockquote>\n\n<b>Contenido exclusivo 🔞🔒</b>\n\n<a href='https://cutt.ly/xtAOopXP'>✅ Acceso Completo ✅</a>",
+                parse_mode=enums.ParseMode.HTML,
                 reply_markup=InlineKeyboardMarkup(buttons)
             )
-        except:
+        except Exception as inner_error:
+            print(f"Error sending photo: {inner_error}")
             pass
     except Exception as e:
-        print(str(e))
+        print(f"Error in approve_new: {str(e)}")
         pass

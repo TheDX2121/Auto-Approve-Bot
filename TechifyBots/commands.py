@@ -84,16 +84,17 @@ async def approve_new(client, m):
     try:
         await client.approve_chat_join_request(m.chat.id, m.from_user.id)
         try:
-            # Build buttons dynamically from AUTH_REQ_CHANNELS
-            buttons = []
-            for i in range(0, len(AUTH_REQ_CHANNELS), 2):
-                row = []
-                for j in range(2):
-                    if i + j < len(AUTH_REQ_CHANNELS):
-                        channel = AUTH_REQ_CHANNELS[i + j]
-                        row.append(InlineKeyboardButton(f"✅ {channel}", url=f"https://t.me/c/{abs(channel)}"))
-                if row:
-                    buttons.append(row)
+            # Static 2x2 grid buttons with manual public channel URLs
+buttons = [
+    [
+        InlineKeyboardButton("✅ Channel 1", url="https://t.me/channel1"),
+        InlineKeyboardButton("✅ Channel 2", url="https://t.me/channel2")
+    ],
+    [
+        InlineKeyboardButton("✅ Channel 3", url="https://t.me/channel3"),
+        InlineKeyboardButton("✅ Channel 4", url="https://t.me/channel4")
+    ]
+]
 
             # Send photo (from PICS variable) with caption and buttons
             await client.send_photo(

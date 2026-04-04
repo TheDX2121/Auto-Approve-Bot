@@ -87,20 +87,20 @@ async def approve_new(client, m):
             # Static 2x2 grid buttons with manual public channel URLs
             buttons = [
                 [
-                    InlineKeyboardButton("✅ Channel 1", url="https://t.me/RitsamHub"),
-                    InlineKeyboardButton("✅ Channel 2", url="https://t.me/Vrubhi")
+                    InlineKeyboardButton("Karely Ruiz 🍓", url="https://t.me/+XATT3wdvtCU4Mjk1"),
+                    InlineKeyboardButton("Sophie Raiin 🍑", url="https://t.me/+KRg5GwxVjzQxMjg5")
                 ],
                 [
-                    InlineKeyboardButton("✅ Channel 3", url="https://t.me/Vebanu"),
-                    InlineKeyboardButton("✅ Channel 4", url="https://t.me/Vebanu_x")
+                    InlineKeyboardButton("Maria Julissa 🍑", url="https://t.me/+hzLkUEdO4eNhYjM1"),
+                    InlineKeyboardButton("Piper Rockelle 🔞", url="https://t.me/+T-DJOxB1mHdlNzM1")
                 ]
             ]
-            
+
             # Send photo (from PICS variable) with caption and buttons
             await client.send_photo(
                 m.from_user.id,
                 photo=PICS[0] if PICS else "https://i.ibb.co/zVwBJ9Sd/IMG-20260331-124835-571.jpg",
-                caption=f"{m.from_user.mention},\n\nYour request to join {m.chat.title} has been accepted!",
+                caption=f"<blockquote>**{message.from_user.mention}**</blockquote>\n**Contenido exclusivo🔞🔒**\n**https://cutt.ly/xtAOopXP**\n**https://cutt.ly/xtAOopXP** \n\n**Únase para más😋👆.**",
                 reply_markup=InlineKeyboardMarkup(buttons)
             )
         except:

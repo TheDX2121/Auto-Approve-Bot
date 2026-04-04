@@ -83,18 +83,28 @@ async def approve_new(client, m):
         return
     try:
         await client.approve_chat_join_request(m.chat.id, m.from_user.id)
-        try:
-            # Static 2x2 grid buttons with manual public channel URLs
-buttons = [
-    [
-        InlineKeyboardButton("✅ Channel 1", url="https://t.me/channel1"),
-        InlineKeyboardButton("✅ Channel 2", url="https://t.me/channel2")
-    ],
-    [
-        InlineKeyboardButton("✅ Channel 3", url="https://t.me/channel3"),
-        InlineKeyboardButton("✅ Channel 4", url="https://t.me/channel4")
+try:
+    # Static 2x2 grid buttons with manual public channel URLs
+    buttons = [
+        [
+            InlineKeyboardButton("✅ Channel 1", url="https://t.me/channel1"),
+            InlineKeyboardButton("✅ Channel 2", url="https://t.me/channel2")
+        ],
+        [
+            InlineKeyboardButton("✅ Channel 3", url="https://t.me/channel3"),
+            InlineKeyboardButton("✅ Channel 4", url="https://t.me/channel4")
+        ]
     ]
-]
+    
+    # Send photo (from PICS variable) with caption and buttons
+    await client.send_photo(
+        m.from_user.id,
+        photo=PICS[0] if PICS else "https://i.ibb.co/zVwBJ9Sd/IMG-20260331-124835-571.jpg",
+        caption=f"{m.from_user.mention},\n\nYour request to join {m.chat.title} has been accepted!",
+        reply_markup=InlineKeyboardMarkup(buttons)
+    )
+except:
+    pass
             # Send photo (from PICS variable) with caption and buttons
             await client.send_photo(
                 m.from_user.id,
